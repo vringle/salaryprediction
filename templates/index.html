@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Salaray Prediction</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+	<div class="login">
+
+		<h1>SALARY PREDICTION SYSTEM </h1>
+
+		<form action="{{ url_for('predict')}}"method="post">
+			<div class="textbox">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" name="experince" placeholder="experince" required="required" />
+
+			</div>
+
+
+			<div class="textbox">
+			
+				<input type="text" name="test_score" placeholder="test_score" required="required" />
+
+			</div>
+
+			<div class="textbox">
+				
+			
+				<input type="text" name="interview_score" placeholder="interview_score" required="required" />
+
+			</div>
+			
+			<button type="submit" class="btn">Predict</button>
+
+		</form>
+		<br>
+		<br>
+		{{ prediction_text }}
+
+	</div>
+
+</body>
+
+</html>
